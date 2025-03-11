@@ -1,0 +1,36 @@
+<!-- 在<head>部分保持相同 -->
+<section class="dynamic-works">
+    <div class="work-item">
+        <div class="media-container">
+            <!-- 视频示例 -->
+            <video controls>
+                <source src="assets/works/animation.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="description">
+            <h3>交互动画设计</h3>
+            <p>使用After Effects制作的加载动画...</p>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div id="lottie-container" style="width: 300px; height: 300px;"></div>
+        <div class="description">
+            <h3>Lottie动画展示</h3>
+            <p>适用于移动端的矢量动画</p>
+        </div>
+    </div>
+</section>
+
+<!-- 在</body>前添加 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+<script>
+    // Lottie动画初始化
+    const animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/works/animation.json' // 你的Lottie JSON文件路径
+    });
+</script>
